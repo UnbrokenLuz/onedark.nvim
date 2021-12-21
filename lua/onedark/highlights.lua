@@ -115,7 +115,7 @@ hl.syntax = {
     PreProc = colors.violet,
     PreCondit = colors.violet,
     Include = colors.violet,
-    Keyword = {fg = c.violet, italic = true},
+    Keyword = {fg = c.violet, italic = cfg.italics},
     Define = colors.violet,
     Typedef = colors.violet,
     Exception = colors.violet,
@@ -132,9 +132,9 @@ hl.syntax = {
     Title = colors.cyan,
     Tag = colors.sage,
     Delimiter = colors.lightGrey,
-    Comment = {fg = c.stone, italic = cfg.italic_comment},
-    SpecialComment = {fg = c.stone, italic = cfg.italic_comment},
-    Todo = {fg = c.coral, italic = cfg.italic_comment}
+    Comment = {fg = c.stone, italic = cfg.italics},
+    SpecialComment = {fg = c.stone, italic = cfg.italics},
+    Todo = {fg = c.coral, italic = cfg.italics}
 }
 
 hl.treesitter = {
@@ -142,7 +142,7 @@ hl.treesitter = {
     TSAttribute = colors.cyan,
     TSBoolean = colors.whiskey,
     TSCharacter = colors.whiskey,
-    TSComment = {fg = c.stone, italic = cfg.italic_comment},
+    TSComment = {fg = c.stone, italic = cfg.italics},
     TSConditional = colors.violet,
     TSConstant = colors.whiskey,
     TSConstBuiltin = colors.whiskey,
@@ -155,8 +155,8 @@ hl.treesitter = {
     TSFunction = {fg = c.malibu, bold = true},
     TSFuncBuiltin = colors.cyan,
     TSFuncMacro = colors.cyan,
-    TSInclude = {fg = c.violet, italic = true},
-    TSKeyword = {fg = c.violet, italic = true},
+    TSInclude = {fg = c.violet, italic = cfg.italics},
+    TSKeyword = {fg = c.violet, italic = cfg.italics},
     TSKeywordFunction = colors.violet,
     TSKeywordOperator = colors.violet,
     TSLabel = colors.coral,
@@ -196,7 +196,7 @@ hl.treesitter = {
     TSType = colors.chalky,
     TSTypeBuiltin = colors.chalky,
     TSVariable = colors.ivory,
-    TSVariableBuiltin = {fg = c.chalky, italic = true},
+    TSVariableBuiltin = {fg = c.chalky, italic = cfg.italics},
 }
 
 hl.plugins.lsp = {

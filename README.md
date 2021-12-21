@@ -96,15 +96,15 @@ colorscheme onedark
 
 ### Onedark options
 
-| Variable name                     | Default value | Description                                                                   |
-| --------------------------------- | ------------- | ----------------------------------------------------------------------------- |
-| `onedark_style`                   | `'normal'`    | change style variant of one dark                                              |
-| `onedark_transparent_background`  | `false`       | enable transparent background                                                 |
-| `onedark_italic_comment`          | `true`        | enable italic comments                                                        |
-| `onedark_disable_terminal_colors` | `false`       | disable terminal colors                                                       |
-| `onedark_diagnostics_undercurl`   | `true`        | use curly underline (undercurl) instead of standard underline for diagnostics |
-| `onedark_darker_diagnostics`      | `true`        | show diagnostics using a darker color                                         |
-| `onedark_hide_ending_tildes`      | `false`       | hide end of buffer tildes                                                     |
+| Variable name                     | Default value | Description                           |
+| --------------------------------- | ------------- | ------------------------------------- |
+| `onedark_style`                   | `'normal'`    | Change style variant of one dark      |
+| `onedark_italics`                 | `true`        | Enable italics                        |
+| `onedark_transparent_background`  | `false`       | Enable transparent background         |
+| `onedark_disable_terminal_colors` | `false`       | Disable terminal colors               |
+| `onedark_diagnostics_undercurl`   | `true`        | Use curly underline for diagnostics   |
+| `onedark_darker_diagnostics`      | `true`        | Show diagnostics using a darker color |
+| `onedark_hide_ending_tildes`      | `false`       | Hide end of buffer tildes             |
 
 ### Configure onedark.nvim using vimscript:
 
@@ -117,14 +117,14 @@ colorscheme onedark
 When using vimscript to configure onedark settings **be sure** to use `v:true` and `v:false` to set boolean values!
 
 ```vim
-let g:onedark_italic_comment = v:true        " don't use 0 or 1
+let g:onedark_italics = v:true        " don't use 0 or 1
 ```
 
 ### Configure onedark.nvim using lua:
 
 ```lua
 vim.g.onedark_style = 'vivid'
-vim.g.onedark_italic_comment = false
+vim.g.onedark_italics = false
 vim.g.<onedark_option> = 'value'
 require('onedark').setup()
 ```
