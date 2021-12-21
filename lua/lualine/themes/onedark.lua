@@ -1,30 +1,19 @@
 local c = require('onedark.colors')
-local colors = {
-    bg = c.bg0,
-    fg = c.fg,
-    red = c.red,
-    green = c.green,
-    yellow = c.yellow,
-    blue = c.blue,
-    purple = c.purple,
-    cyan = c.cyan,
-    gray = c.grey
-}
 
 local one_dark = {
     inactive = {
-        a = {fg = colors.gray, bg = colors.bg, gui = 'bold'},
-        b = {fg = colors.gray, bg = colors.bg},
-        c = {fg = colors.gray, bg = c.bg1},
+        a = {fg = c.stone, bg = c.bg0, gui = 'bold'},
+        b = {fg = c.stone, bg = c.bg0},
+        c = {fg = c.stone, bg = c.bg1},
     },
     normal = {
-        a = {fg = colors.bg, bg = colors.green, gui = 'bold'},
-        b = {fg = colors.fg, bg = c.bg3},
-        c = {fg = colors.fg, bg = c.bg1},
+        a = {fg = c.bg0, bg = c.sage, gui = 'bold'},
+        b = {fg = c.ivory, bg = c.bg3},
+        c = {fg = c.ivory, bg = c.bg1},
     },
-    visual = {a = {fg = colors.bg, bg = colors.purple, gui = 'bold'}},
-    replace = {a = {fg = colors.bg, bg = colors.red, gui = 'bold'}},
-    insert = {a = {fg = colors.bg, bg = colors.blue, gui = 'bold'}},
-    command = {a = {fg = colors.bg, bg = colors.yellow, gui = 'bold'}}
+    visual = {a = {fg = c.bg0, bg = c.violet, gui = 'bold'}},
+    replace = {a = {fg = c.bg0, bg = c.coral, gui = 'bold'}},
+    insert = {a = {fg = c.bg0, bg = c.malibu, gui = 'bold'}},
+    command = {a = {fg = c.bg0, bg = c.chakly, gui = 'bold'}}
 }
 return one_dark;
