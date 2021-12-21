@@ -13,14 +13,6 @@ local function colorscheme()
   terminal.setup()
 end
 
-function M.toggle()
-  local styles = { 'normal', 'vivid' }
-  local index={}
-  for k,v in pairs(styles) do index[v]=k end
-  vim.g.onedark_style = styles[index[vim.g.onedark_style] + 1] or 'normal'
-  vim.cmd[[colorscheme onedark]]
- end
-
 function M.setup() colorscheme() end
 
 return M
