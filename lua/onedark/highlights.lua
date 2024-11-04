@@ -153,7 +153,7 @@ hl.treesitter = {
     TSField = colors.cyan,
     TSFloat = colors.whiskey,
     TSFunction = {fg = c.malibu, bold = true},
-    TSFuncBuiltin = colors.cyan,
+    TSFuncBuiltin = {fg = "NONE", bg = "NONE"},
     TSFuncMacro = colors.cyan,
     TSInclude = {fg = c.violet, italic = cfg.italics},
     TSKeyword = {fg = c.violet, italic = cfg.italics},
