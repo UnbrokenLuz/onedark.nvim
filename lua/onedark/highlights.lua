@@ -197,6 +197,7 @@ hl.treesitter = {
     TSTypeBuiltin = colors.chalky,
     TSVariable = colors.ivory,
     TSVariableBuiltin = {fg = c.chalky, italic = cfg.italics},
+    ["@module"] = {fg = "NONE", bg = "NONE"},
 }
 
 hl.plugins.lsp = {
