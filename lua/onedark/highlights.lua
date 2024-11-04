@@ -128,7 +128,7 @@ hl.syntax = {
     Special = colors.coral,
     SpecialChar = colors.coral,
     Function = colors.malibu,
-    Operator = colors.ivory,
+    Operator = {fg = c.violet},
     Title = colors.cyan,
     Tag = colors.sage,
     Delimiter = colors.lightGrey,
