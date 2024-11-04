@@ -193,8 +193,8 @@ hl.treesitter = {
     TSNote = colors.ivory,
     TSWarning = colors.ivory,
     TSDanger = colors.ivory,
-    TSType = colors.cian,
-    TSTypeBuiltin = colors.cian,
+    TSType = {fg = c.ivory},
+    TSTypeBuiltin = {fg = c.ivory},
     TSVariable = colors.ivory,
     TSVariableBuiltin = {fg = c.chalky, italic = cfg.italics},
    
