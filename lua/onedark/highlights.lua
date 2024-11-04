@@ -161,7 +161,7 @@ hl.treesitter = {
     TSKeywordOperator = colors.violet,
     TSLabel = colors.coral,
     TSMethod = {fg = c.malibu, bold = true},
-    TSNamespace = colors.chalky,
+  --  TSNamespace = colors.chalky,
     TSNone = colors.ivory,
     TSNumber = colors.whiskey,
     TSOperator = colors.violet, 
