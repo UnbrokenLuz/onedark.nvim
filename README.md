@@ -1,4 +1,4 @@
-fork from one-dark/onedark.nvim, just  little colors  modification
+fork from one-dark/onedark.nvim, just little colors modification to my personal taste.
 
 # Neovim One Dark
 
