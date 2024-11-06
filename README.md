@@ -1,3 +1,5 @@
+fork from one-dark/onedark.nvim, just  little colors  modification
+
 # Neovim One Dark
 
 A Dark Theme for Neovim based on [One Dark Theme](https://github.com/atom/atom/tree/master/packages/one-dark-ui) written in lua with [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter) syntax highlight.
