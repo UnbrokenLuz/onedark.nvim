@@ -23,6 +23,7 @@ local function vim_highlights(highlights)
     end
 end
 
+
 local colors = {
     ivory = {fg = c.ivory},
     lightGrey = {fg = c.light_grey},
@@ -106,7 +107,7 @@ hl.syntax = {
     Number = colors.whiskey,
     Float = colors.whiskey,
     Boolean = colors.whiskey,
-    Type = { fg = c.ivory }, -- MODIFICADO: cor padrão para Type (ex: std)
+    Type = colors.chalky,
     Structure = colors.chalky,
     StorageClass = colors.chalky,
     Identifier = colors.ivory,
@@ -127,7 +128,7 @@ hl.syntax = {
     Special = colors.coral,
     SpecialChar = colors.coral,
     Function = colors.malibu,
-    Operator = colors.violet,
+    Operator = colors.ivory,
     Title = colors.cyan,
     Tag = colors.sage,
     Delimiter = colors.lightGrey,
@@ -152,7 +153,7 @@ hl.treesitter = {
     TSField = colors.cyan,
     TSFloat = colors.whiskey,
     TSFunction = {fg = c.malibu, bold = true},
-    TSFuncBuiltin = {fg = "NONE", bg = "NONE"},
+    TSFuncBuiltin = colors.cyan,
     TSFuncMacro = colors.cyan,
     TSInclude = {fg = c.violet, italic = cfg.italics},
     TSKeyword = {fg = c.violet, italic = cfg.italics},
@@ -160,16 +161,16 @@ hl.treesitter = {
     TSKeywordOperator = colors.violet,
     TSLabel = colors.coral,
     TSMethod = {fg = c.malibu, bold = true},
-    TSNamespace = { fg = c.ivory }, -- MODIFICADO: cor padrão para TSNamespace (ex: std)
+    TSNamespace = colors.chalky,
     TSNone = colors.ivory,
     TSNumber = colors.whiskey,
-    TSOperator = colors.violet, 
+    TSOperator = colors.dark_purple,
     TSParameter = colors.whiskey,
     TSParameterReference = colors.ivory,
     TSProperty = colors.coral,
     TSPunctDelimiter = colors.cyan,
     TSPunctBracket = colors.ivory,
-    TSPunctSpecial = colors.violet, 
+    TSPunctSpecial = colors.dark_purple,
     TSRepeat = colors.violet,
     TSString = colors.sage,
     TSStringRegex = colors.whiskey,
@@ -192,12 +193,10 @@ hl.treesitter = {
     TSNote = colors.ivory,
     TSWarning = colors.ivory,
     TSDanger = colors.ivory,
-    TSType = { fg = c.ivory }, -- MODIFICADO: cor padrão para TSType (ex: std)
-    TSTypeBuiltin = { fg = c.ivory }, -- MODIFICADO: cor padrão para TSTypeBuiltin (ex: std)
+    TSType = colors.chalky,
+    TSTypeBuiltin = colors.chalky,
     TSVariable = colors.ivory,
     TSVariableBuiltin = {fg = c.chalky, italic = cfg.italics},
-            ["@type"] = {fg = "#e0e2ea"},
-   
 }
 
 hl.plugins.lsp = {
@@ -357,6 +356,128 @@ hl.plugins.ts_rainbow = {
     rainbowcol6 = colors.sage,
     rainbowcol7 = colors.coral
 }
+
+-- hl.langs.c = {
+--     cInclude = colors.malibu,
+--     cStorageClass = colors.violet,
+--     cTypedef = colors.violet,
+--     cDefine = colors.cyan,
+--     cTSInclude = colors.malibu,
+--     cTSConstant = colors.cyan,
+--     cTSConstMacro = colors.violet,
+-- }
+
+-- hl.langs.cpp = {
+--     cppStatement = { fg = c.violet, bold = true },
+--     cppTSInclude = colors.malibu,
+--     cppTSConstant = colors.cyan,
+--     cppTSConstMacro = colors.violet,
+-- }
+
+-- hl.langs.markdown = {
+--     markdownBlockquote = colors.stone,
+--     markdownBold = {fg = c.none, bold = true},
+--     markdownBoldDelimiter = colors.stone,
+--     markdownCode = colors.sage,
+--     markdownCodeBlock = colors.sage,
+--     markdownCodeDelimiter = colors.chalky,
+--     markdownH1 = {fg = c.coral, bold = true},
+--     markdownH2 = {fg = c.violet, bold = true},
+--     markdownH3 = {fg = c.orange, bold = true},
+--     markdownH4 = {fg = c.coral, bold = true},
+--     markdownH5 = {fg = c.violet, bold = true},
+--     markdownH6 = {fg = c.orange, bold = true},
+--     markdownHeadingDelimiter = colors.stone,
+--     markdownHeadingRule = colors.stone,
+--     markdownId = colors.chalky,
+--     markdownIdDeclaration = colors.coral,
+--     markdownItalic = {fg = c.none, italic = true},
+--     markdownItalicDelimiter = {fg = c.stone, italic = true},
+--     markdownLinkDelimiter = colors.stone,
+--     markdownLinkText = colors.coral,
+--     markdownLinkTextDelimiter = colors.stone,
+--     markdownListMarker = colors.coral,
+--     markdownOrderedListMarker = colors.coral,
+--     markdownRule = colors.violet,
+--     markdownUrl = {fg = c.malibu, underline = true},
+--     markdownUrlDelimiter = colors.stone,
+--     markdownUrlTitleDelimiter = colors.sage
+-- }
+
+-- hl.langs.php = {
+--     phpFunctions = colors.ivory,
+--     phpMethods = colors.cyan,
+--     phpStructure = colors.violet,
+--     phpOperator = colors.violet,
+--     phpMemberSelector = colors.ivory,
+--     phpVarSelector = colors.whiskey,
+--     phpIdentifier = colors.whiskey,
+--     phpBoolean = colors.cyan,
+--     phpNumber = colors.whiskey,
+--     phpHereDoc = colors.sage,
+--     phpNowDoc = colors.sage,
+--     phpSCKeyword = colors.violet,
+--     phpFCKeyword = colors.violet,
+--     phpRegion = colors.malibu
+-- }
+
+-- hl.langs.scala = {
+--     scalaNameDefinition = colors.ivory,
+--     scalaInterpolationBoundary = colors.violet,
+--     scalaInterpolation = colors.violet,
+--     scalaTypeOperator = colors.coral,
+--     scalaOperator = colors.coral,
+--     scalaKeywordModifier = colors.coral
+-- }
+
+-- hl.langs.tex = {
+--     latexTSInclude = colors.malibu,
+--     latexTSFuncMacro = colors.violet,
+--     latexTSEnvironment = { fg = c.cyan, bold = true },
+--     latexTSEnvironmentName = colors.chalky,
+--     texCmdEnv = colors.cyan,
+--     texEnvArgName = colors.chalky,
+--     latexTSTitle = colors.sage,
+--     latexTSType = colors.malibu,
+--     latexTSMath   = colors.whiskey,
+--     texMathZoneX  = colors.whiskey,
+--     texMathZoneXX = colors.whiskey,
+--     texMathDelimZone = colors.lightGrey,
+--     texMathDelim = colors.violet,
+--     texMathOper = colors.coral,
+--     texCmd = colors.violet,
+--     texCmdPart = colors.malibu,
+--     texCmdPackage = colors.malibu,
+--     texPgfType = colors.chalky,
+-- }
+
+-- hl.langs.vim = {
+--     vimTSFuncMacro = {fg = c.cyan, bold = true},
+--     vimCommentTitle = {fg = c.light_grey, bold = true},
+--     vimCommand =  {fg = c.cyan, bold = true},
+--     vimLet = colors.violet,
+--     vimFunction = colors.malibu,
+--     vimIsCommand = colors.ivory,
+--     vimUserFunc = colors.malibu,
+--     vimFuncName = colors.malibu,
+--     vimMap = colors.violet,
+--     vimMapModKey = colors.whiskey,
+--     vimNotation = colors.coral,
+--     vimMapLhs = colors.malibu,
+--     vimMapRhs = colors.malibu,
+--     vimOption = colors.coral,
+--     vimUserAttrbKey = colors.coral,
+--     vimUserAttrb = colors.malibu,
+--     vimSynType = colors.cyan,
+--     vimHiBang = colors.violet,
+--     vimSet = colors.chalky,
+--     vimSetEqual = colors.chalky,
+--     vimSetSep = colors.lightGrey,
+--     vimVar = colors.ivory,
+--     vimFuncVar = colors.ivory,
+--     vimContinue = colors.stone,
+--     vimAutoCmdSfxList = colors.cyan,
+-- }
 
 function M.setup()
     vim_highlights(hl.common)
