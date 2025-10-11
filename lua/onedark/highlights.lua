@@ -480,15 +480,14 @@ hl.plugins.ts_rainbow = {
 --     vimContinue = colors.stone,
 --     vimAutoCmdSfxList = colors.cyan,
 -- }
-vim.cmd([[syntax match StdWord /\<std\>/]])
-vim.cmd([[highlight link StdWord Identifier]])
-        
 function M.setup()
     vim_highlights(hl.common)
     vim_highlights(hl.syntax)
     vim_highlights(hl.treesitter)
     -- for _, group in pairs(hl.langs) do vim_highlights(group) end
     for _, group in pairs(hl.plugins) do vim_highlights(group) end
+    vim.cmd([[syntax match StdWord /\<std\>/]])
+    vim.cmd([[highlight link StdWord Identifier]])
 end
 
 return M
