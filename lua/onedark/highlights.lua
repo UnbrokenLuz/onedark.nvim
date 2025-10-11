@@ -489,5 +489,7 @@ function M.setup()
     vim.cmd([[syntax match StdWord /\<std\>/]])
     vim.cmd([[highlight link StdWord Identifier]])
 end
+        vim.cmd([[highlight MinhaPalavra guifg=#ff0000 guibg=#000000 gui=bold]])
+vim.cmd([[syntax match MinhaPalavra /\<teste\>/]])
 
 return M
